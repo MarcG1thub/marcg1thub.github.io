@@ -1,1 +1,155 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sobre — Marc</title><meta name="description" content="Página personal de Marc — estilo futurista."><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/styles.css"></head><body><div class="stars" aria-hidden="true"></div><main class="container" role="main"><section class="card"><header class="holo"><div class="header-left"><div class="avatar float" aria-hidden="true">MG</div><div><h1 class="sheen">Hola — Soy Marc</h1><p class="lead">Creador orientado al futuro, combino diseño y código. Me gustan las interfaces limpias, el movimiento sutil y experimentar con nuevas experiencias web.</p><div class="tags" aria-hidden="true"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Diseño</span><span class="tag">Web</span></div></div></div><div><button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Alternar tema">🌙 <span id="themeLabel">Oscuro</span></button></div></header><div class="panel"><h2 style="margin:0 0 8px 0">Acerca de esta página</h2><p class="small">Estética futurista / neón: glassmorphism, fondo animado y una pequeña línea de tiempo. Responsive y accesible.</p><div class="timeline" aria-label="Línea temporal personal"><div class="entry"><div class="dot" aria-hidden="true"></div><div class="text"><strong>Ahora</strong> — Construyendo experiencias web cuidadas y puliendo este portafolio.</div></div><div class="entry"><div class="dot" aria-hidden="true"></div><div class="text"><strong>Antes</strong> — Experimenté con maquetación, animaciones y rendimiento.</div></div><div class="entry"><div class="dot" aria-hidden="true"></div><div class="text"><strong>Futuro</strong> — Publicar proyectos colaborativos y compartir más trabajo open-source.</div></div></div><footer class="smallfoot">¿Quieres ajustar esto? Edita <code>index.html</code> o <code>styles.css</code> y súbelo al repo.</footer></div></section><aside class="right"><div class="glass-card card"><h3 style="margin-top:0">Contacto</h3><p class="small">Encuentra mi perfil y proyectos:</p><p><a class="btn" href="https://github.com/MarcG1thub" target="_blank" rel="noopener noreferrer">Ver mi GitHub</a></p></div><div class="glass-card card"><h3 style="margin-top:0">Firma</h3><pre><code>&lt;meta name="author" content="Marc" /&gt;&lt;link rel="me" href="https://github.com/MarcG1thub" /&gt;</code></pre><p class="small">Copia esto en otras páginas para una firma ligera.</p></div></aside></main><script>(function(){const r=document.documentElement,t=document.getElementById('themeToggle'),l=document.getElementById('themeLabel'),k='site-theme';function a(e){if(e==='light'){r.setAttribute('data-theme','light');t.setAttribute('aria-pressed','true');l.textContent='Claro';}else{r.setAttribute('data-theme','dark');t.setAttribute('aria-pressed','false');l.textContent='Oscuro';}}const s=localStorage.getItem(k);if(s){a(s);}else{const p=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches;a(p?'light':'dark');}t.addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme')||'dark',n=c==='dark'?'light':'dark';a(n);localStorage.setItem(k,n);});window.addEventListener('mousemove',e=>{const x=(e.clientX/window.innerWidth-0.5)*2,y=(e.clientY/window.innerHeight-0.5)*2;document.documentElement.style.setProperty('--mx',x.toFixed(3));document.documentElement.style.setProperty('--my',y.toFixed(3));});t.addEventListener('keydown',e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();t.click();}})})();</script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sobre — Marc</title>
+  <meta name="description" content="Página personal de Marc — estilo futurista." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Enlazamos el CSS externo: el HTML se alimenta del archivo styles.css -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Capa de estrellas (decorativa) -->
+  <div class="stars" aria-hidden="true"></div>
+
+  <main class="container" role="main">
+    <section class="card">
+      <header class="holo">
+        <div class="header-left">
+          <!-- Avatar con iniciales -->
+          <div class="avatar float" aria-hidden="true">MG</div>
+
+          <div>
+            <h1 class="sheen">Hola — Soy Marc</h1>
+            <p class="lead">
+              Creador orientado al futuro, combino diseño y código. Me gustan las interfaces limpias,
+              el movimiento sutil y experimentar con nuevas experiencias web.
+            </p>
+
+            <!-- Etiquetas / skills -->
+            <div class="tags" aria-hidden="true">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Diseño</span>
+              <span class="tag">Web</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón para alternar tema oscuro/claro -->
+        <div>
+          <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Alternar tema">
+            🌙 <span id="themeLabel">Oscuro</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="panel">
+        <h2 style="margin:0 0 8px 0">Acerca de esta página</h2>
+        <p class="small">
+          Estética futurista / neón: glassmorphism, fondo animado y una pequeña línea de tiempo.
+          Responsive y accesible.
+        </p>
+
+        <!-- Timeline con entradas -->
+        <div class="timeline" aria-label="Línea temporal personal">
+          <div class="entry">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="text"><strong>Ahora</strong> — Construyendo experiencias web cuidadas y puliendo este portafolio.</div>
+          </div>
+
+          <div class="entry">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="text"><strong>Antes</strong> — Experimenté con maquetación, animaciones y rendimiento.</div>
+          </div>
+
+          <div class="entry">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="text"><strong>Futuro</strong> — Publicar proyectos colaborativos y compartir más trabajo open-source.</div>
+          </div>
+        </div>
+
+        <footer class="smallfoot">
+          ¿Quieres ajustar esto? Edita <code>index.html</code> o <code>styles.css</code> y súbelo al repo.
+        </footer>
+      </div>
+    </section>
+
+    <aside class="right">
+      <div class="glass-card card">
+        <h3 style="margin-top:0">Contacto</h3>
+        <p class="small">Encuentra mi perfil y proyectos:</p>
+        <p>
+          <a class="btn" href="https://github.com/MarcG1thub" target="_blank" rel="noopener noreferrer">Ver mi GitHub</a>
+        </p>
+      </div>
+
+      <div class="glass-card card">
+        <h3 style="margin-top:0">Firma</h3>
+        <pre><code>&lt;meta name="author" content="Marc" /&gt;
+&lt;link rel="me" href="https://github.com/MarcG1thub" /&gt;</code></pre>
+        <p class="small">Copia esto en otras páginas para una firma ligera.</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Script para control de tema y parallax ligero -->
+  <script>
+    (function(){
+      // Referencias rápidas
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const label = document.getElementById('themeLabel');
+      const storageKey = 'site-theme';
+
+      // applyTheme: aplica el tema 'light' o 'dark' al atributo data-theme del <html>
+      function applyTheme(theme){
+        if(theme === 'light'){
+          document.documentElement.setAttribute('data-theme','light');
+          toggle.setAttribute('aria-pressed','true');
+          label.textContent = 'Claro';
+        } else {
+          document.documentElement.setAttribute('data-theme','dark');
+          toggle.setAttribute('aria-pressed','false');
+          label.textContent = 'Oscuro';
+        }
+      }
+
+      // Inicialización: prioridad -> localStorage -> preferencia del sistema -> por defecto 'dark'
+      const saved = localStorage.getItem(storageKey);
+      if(saved){
+        applyTheme(saved);
+      } else {
+        const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        applyTheme(prefersLight ? 'light' : 'dark');
+      }
+
+      // Toggle: guarda en localStorage la preferencia del usuario
+      toggle.addEventListener('click', ()=>{
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = current === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+        localStorage.setItem(storageKey,next);
+      });
+
+      // Parallax sutil: actualiza variables CSS --mx y --my según posición del ratón
+      window.addEventListener('mousemove', (e)=>{
+        const x = (e.clientX / window.innerWidth - 0.5) * 2;
+        const y = (e.clientY / window.innerHeight - 0.5) * 2;
+        root.style.setProperty('--mx', x.toFixed(3));
+        root.style.setProperty('--my', y.toFixed(3));
+      });
+
+      // Accesibilidad: permitir activar el toggle con teclado (espacio/enter)
+      toggle.addEventListener('keydown', (e)=>{
+        if(e.key === ' ' || e.key === 'Enter'){
+          e.preventDefault();
+          toggle.click();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
