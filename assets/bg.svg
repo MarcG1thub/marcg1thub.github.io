@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071028" />
+      <stop offset="100%" stop-color="#0f1724" />
+    </linearGradient>
+    <pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" />
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)" />
+  <!-- faint dotted overlay to give texture -->
+  <rect width="100%" height="100%" fill="url(#p)" opacity="0.03" />
+  <!-- subtle radial light source -->
+  <circle cx="1600" cy="200" r="600" fill="#00f0ff" opacity="0.04" />
+  <circle cx="200" cy="900" r="500" fill="#c75cff" opacity="0.03" />
+</svg>
