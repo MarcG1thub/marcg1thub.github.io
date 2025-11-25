@@ -1,0 +1,95 @@
+/* puzzle/puzzle.css - styles for the 15-puzzle mini-game modal and board */
+:root{
+  --puzzle-bg: rgba(2,6,23,0.85);
+  --tile-size: 84px;
+  --gap: 10px;
+  --neon-c: linear-gradient(135deg,#00f0ff,#c75cff);
+  --glass: rgba(255,255,255,0.04);
+}
+
+/* modal backdrop */
+.puzzle-modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(2,6,23,0.5);
+  z-index:9999;
+  padding:24px;
+}
+.puzzle-modal.open{ display:flex; }
+
+.puzzle-panel{
+  width:100%;
+  max-width:720px;
+  background:var(--puzzle-bg);
+  border-radius:14px;
+  padding:20px;
+  border:1px solid rgba(255,255,255,0.04);
+  box-shadow:0 10px 50px rgba(2,6,23,0.8);
+}
+.puzzle-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
+.puzzle-title{ font-size:18px; color:#e6eef8; }
+.puzzle-controls{ display:flex; gap:8px; }
+.puzzle-controls button{
+  background:var(--neon-c);
+  border:none;
+  padding:8px 12px;
+  border-radius:10px;
+  color:#06101a;
+  font-weight:700;
+  cursor:pointer;
+}
+.puzzle-meta{ display:flex; gap:12px; align-items:center; color:#cfe8ff; font-size:13px; }
+
+/* board */
+.puzzle-board{
+  display:grid;
+  grid-template-columns:repeat(4, var(--tile-size));
+  grid-auto-rows:var(--tile-size);
+  gap:var(--gap);
+  justify-content:center;
+  padding:12px;
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.tile{
+  display:grid;
+  place-items:center;
+  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Segoe UI Mono', 'Helvetica Neue', monospace;
+  font-weight:800;
+  color:#06101a;
+  background:var(--neon-c);
+  border-radius:10px;
+  user-select:none;
+  cursor:pointer;
+  box-shadow:0 6px 20px rgba(199,92,255,0.08);
+  font-size:20px;
+}
+.tile.blank{ background:transparent; box-shadow:none; cursor:default; }
+
+/* win overlay */
+.puzzle-win{
+  display:none;
+  padding:18px;
+  margin-top:12px;
+  border-radius:10px;
+  background:linear-gradient(90deg,rgba(0,240,255,0.06),rgba(199,92,255,0.06));
+  color:#06101a;
+  font-weight:700;
+}
+.puzzle-win.show{ display:block; }
+
+/* responsive */
+@media (max-width:520px){
+  :root{ --tile-size:62px; }
+  .puzzle-panel{ padding:12px; }
+  .puzzle-controls button{ padding:6px 8px; }
+}
